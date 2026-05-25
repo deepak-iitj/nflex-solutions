@@ -23,6 +23,14 @@ import {
   Award,
   Users,
   Cog,
+  ScanEye,
+  BrainCircuit,
+  Database,
+  Navigation,
+  MonitorPlay,
+  Bot,
+  Activity,
+  Cloud
 } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -43,6 +51,16 @@ import whyUsVideo from "@/assets/automated-car-factory-with-robotic-arms-assembl
 import processVideo from "@/assets/conveyor-with-advanced-high-precision-robot-arms-at-electronics-manufacturing-factory.mp4";
 import ctaVideo from "@/assets/autonomous-electric-car-factory-with-robotic-arms-assembling-battery-modules.mp4";
 import originalHeroVideo from "@/assets/hero_video.mp4";
+import imgDigitalTwin from "@/assets/verticals/digital_twin_sim.png";
+import imgSpm from "@/assets/verticals/spm_machine.png";
+import imgAiInspection from "@/assets/verticals/ai_inspection.png";
+import imgPredictive from "@/assets/verticals/predictive_maintenance.png";
+import imgSynthetic from "@/assets/verticals/synthetic_data.png";
+import imgModel from "@/assets/verticals/model_training.png";
+import imgMlops from "@/assets/verticals/mlops_dashboard.png";
+import imgCloud from "@/assets/verticals/cloud_edge.png";
+import imgFleet from "@/assets/verticals/fleet_control.png";
+
 
 const allHeroVideos = [
   heroVideo,
@@ -62,40 +80,67 @@ const heroMetrics = [
 
 const services = [
   {
+    icon: MonitorPlay,
+    image: imgDigitalTwin,
+    title: "Digital Twin & Simulation",
+    description:
+      "Full factory process simulation and digital twins utilizing Nvidia Omniverse and Isaac Sim for risk-free virtual testing and workflow optimization.",
+  },
+  {
+    icon: Bot,
+    image: imgSpm,
+    title: "Special Purpose Machines",
+    description:
+      "Design of custom Special Purpose Machines (SPMs) and bespoke software solutions with precision sensor integrations for unique industrial challenges.",
+  },
+  {
+    icon: ScanEye,
+    image: imgAiInspection,
+    title: "AI-Based Inspection",
+    description:
+      "High-speed, AI-based vision inspection systems utilizing multi-sensor fusion to guarantee zero-defect tolerance in critical manufacturing.",
+  },
+  {
+    icon: Activity,
+    image: imgPredictive,
+    title: "Predictive Maintenance",
+    description:
+      "Continuous sensor monitoring combined with AI analytics for predictive maintenance and automated root cause analysis of production anomalies.",
+  },
+  {
+    icon: Database,
+    image: imgSynthetic,
+    title: "Synthetic Data Generation",
+    description:
+      "End-to-end data lifecycle management, from raw sensor telemetry capture to programmatic synthetic data generation for robust AI training.",
+  },
+  {
+    icon: BrainCircuit,
+    image: imgModel,
+    title: "Model Training & Algorithms",
+    description:
+      "Bespoke algorithm development and end-to-end model training services tailored specifically to your physical environments and constraints.",
+  },
+  {
     icon: Cpu,
-    title: "AI-Augmented Control Systems",
+    image: imgMlops,
+    title: "MLOps & AIOps",
     description:
-      "Integrating traditional PLC and DCS systems with Edge AI for real-time autonomous decision making and optimization.",
+      "Robust MLOps and AIOps frameworks for continuous model monitoring, retraining, and high-availability inference on the factory floor.",
   },
   {
-    icon: MonitorCog,
-    title: "Intelligent SCADA & Dashboards",
+    icon: Cloud,
+    image: imgCloud,
+    title: "Cloud & Edge Architecture",
     description:
-      "Next-gen HMI and SCADA enriched with Machine Learning for predictive alarming, anomaly detection, and advanced OEE analytics.",
+      "Scalable cloud services and secure edge compute clusters, facilitating massive data processing, analytics, and fleet-wide model updates.",
   },
   {
-    icon: Zap,
-    title: "Smart Power Management",
+    icon: Navigation,
+    image: imgFleet,
+    title: "Advanced Fleet Control",
     description:
-      "AI-optimized electrical control panels that monitor energy consumption patterns and predict faults before they occur.",
-  },
-  {
-    icon: Wifi,
-    title: "AI-Driven IIoT & Cloud",
-    description:
-      "Edge-to-cloud IoT architectures featuring neural networks for real-time KPIs, computer vision, and predictive maintenance.",
-  },
-  {
-    icon: Gauge,
-    title: "Autonomous Robotics & Drives",
-    description:
-      "Smart VFD selection and robotic integration optimized by AI to reduce energy consumption and maximize throughput autonomously.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "AI-Enhanced Plant Safety",
-    description:
-      "Computer vision and machine learning models for real-time hazard detection, ensuring compliance with ISO 13849 and IEC 61508.",
+      "Proprietary path-planning architectures and continuous trajectory generation to ensure autonomous mobile robots navigate safely.",
   },
 ];
 
@@ -285,14 +330,20 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
               <ScrollReveal key={s.title} delay={i * 0.06}>
-                <div className="group p-7 rounded-xl border border-border bg-card card-hover h-full">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                    <s.icon size={24} className="text-primary" />
+                <div className="h-full rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300 overflow-hidden flex flex-col group shadow-md hover:shadow-primary/5">
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <div className="absolute inset-0 bg-background/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
+                    <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
-                  <h3 className="text-lg font-display font-semibold text-card-foreground mb-2 group-hover:text-primary transition-colors">
-                    {s.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{s.description}</p>
+                  <div className="p-6 flex-1 flex flex-col relative">
+                    <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center mb-4 -mt-12 relative z-20 shadow-lg">
+                      <s.icon size={24} className="text-primary" />
+                    </div>
+                    <h3 className="text-lg font-display font-semibold text-card-foreground mb-3 group-hover:text-primary transition-colors">
+                      {s.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{s.description}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}

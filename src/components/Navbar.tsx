@@ -11,7 +11,7 @@ import { categories } from "@/data/products";
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
   { label: "Products", path: "/products" },
   { label: "Case Studies", path: "/case-studies" },
   { label: "Contact", path: "/contact" },
