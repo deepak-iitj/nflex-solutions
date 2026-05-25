@@ -61,13 +61,13 @@ const Terms = () => {
           <ScrollReveal delay={0.25}>
             <h2 className="text-xl font-display font-bold text-foreground mt-8 mb-2">6. Governing Law</h2>
             <p className="text-muted-foreground leading-relaxed">
-              These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of Ghaziabad, Uttar Pradesh.
+              These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of Gurgaon, Haryana.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
             <h2 className="text-xl font-display font-bold text-foreground mt-8 mb-2">7. Contact</h2>
             <p className="text-muted-foreground leading-relaxed">
-              For questions about these Terms of Service, contact NFlex Solutions at B30/4 Wave Executive Floor, Wave City, Ghaziabad, UP, India. Email:{" "}
+              For questions about these Terms of Service, contact NFlex Solutions at Midtown, T5 504, Sector 59, Gurgaon, Haryana, India 122001. Email:{" "}
               <a href="mailto:Info@nflexsolutions.com" className="text-primary hover:underline">
                 Info@nflexsolutions.com
               </a>

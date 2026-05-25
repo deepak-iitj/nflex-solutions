@@ -13,9 +13,9 @@ export function OrganizationJsonLd() {
     description: "Industrial Automation & Electrical Solutions – Gurgaon, India",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "B30/4 Wave Executive Floor, Wave City",
-      addressLocality: "Ghaziabad",
-      addressRegion: "UP",
+      streetAddress: "Midtown, T5 504, Sector 59",
+      addressLocality: "Gurgaon",
+      addressRegion: "HR",
       addressCountry: "IN",
     },
     contactPoint: {

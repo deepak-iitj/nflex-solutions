@@ -71,7 +71,7 @@ const Privacy = () => {
           <ScrollReveal delay={0.3}>
             <h2 className="text-xl font-display font-bold text-foreground mt-8 mb-2">7. Contact</h2>
             <p className="text-muted-foreground leading-relaxed">
-              NFlex Solutions, B30/4 Wave Executive Floor, Wave City, Ghaziabad, UP, India. Email:{" "}
+              NFlex Solutions, Midtown, T5 504, Sector 59, Gurgaon, Haryana, India 122001. Email:{" "}
               <a href="mailto:Info@nflexsolutions.com" className="text-primary hover:underline">
                 Info@nflexsolutions.com
               </a>
