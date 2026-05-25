@@ -1,4 +1,4 @@
-/**
+content = """/**
  * Brand logos from assets – imported so Vite bundles and hashes them.
  * Use getBrandLogo(brand) or brandLogoUrls for display; scale/crop via CSS (object-contain, aspect ratio).
  */
@@ -23,3 +23,9 @@ export const brandLogoUrls: Record<string, string> = {
 export function getBrandLogo(brand: string): string | undefined {
   return brandLogoUrls[brand];
 }
+"""
+
+with open('src/data/brandLogos.ts', 'w') as f:
+    f.write(content)
+
+print("Updated brandLogos.ts")

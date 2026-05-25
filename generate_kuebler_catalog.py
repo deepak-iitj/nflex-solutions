@@ -1,4 +1,4 @@
-export interface Product {
+content = """export interface Product {
   id: string;
   title: string;
   brand: string;
@@ -187,3 +187,9 @@ export function getSimilarProducts(products: Product[], current: Product, limit 
     .filter((p) => p.id !== current.id && (p.brand === current.brand || p.category === current.category))
     .slice(0, limit);
 }
+"""
+
+with open('src/data/products.ts', 'w') as f:
+    f.write(content)
+
+print("Created products.ts")

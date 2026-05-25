@@ -1,4 +1,6 @@
-import { useState, useMemo, useEffect } from "react";
+import os
+
+content = """import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, Search, Filter, ShoppingCart, Grid3X3, List, LayoutGrid, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -360,3 +362,9 @@ const Products = () => {
 };
 
 export default Products;
+"""
+
+with open("src/pages/Products.tsx", "w") as f:
+    f.write(content)
+
+print("Updated Products.tsx")
