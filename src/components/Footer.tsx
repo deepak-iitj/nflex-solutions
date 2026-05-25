@@ -93,17 +93,16 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-sm text-hero-muted">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
                 <span>
-                  B30/4 Wave Executive Floor, Wave City, Ghaziabad, UP, India,
-                  201015
+                  Midtown, T5 504, Sector 59, Gurgaon, 122001
                 </span>
               </li>
               <li>
                 <a
-                  href="tel:+919873100982"
+                  href="tel:+918756170309"
                   className="flex items-center gap-3 text-sm text-hero-muted hover:text-primary transition-colors"
                 >
                   <Phone size={16} className="text-primary shrink-0" />
-                  +91 9873100982
+                  +91 87561 70309
                 </a>
               </li>
               <li>

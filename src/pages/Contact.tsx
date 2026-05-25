@@ -80,7 +80,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO title="Contact" description="Get in touch with NFlex Solutions. Ghaziabad, India. Email, phone, and contact form for quotes and enquiries." path="/contact" />
+      <SEO title="Contact" description="Get in touch with NFlex Solutions. Gurgaon, India. Email, phone, and contact form for quotes and enquiries." path="/contact" />
       {/* Hero */}
       <section className="relative hero-gradient pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-black pointer-events-none">
@@ -130,7 +130,7 @@ const Contact = () => {
                       </div>
                     </a>
                     <a
-                      href="tel:+919873100982"
+                      href="tel:+918756170309"
                       className="flex items-start gap-4 group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -139,7 +139,7 @@ const Contact = () => {
                       <div>
                         <p className="text-sm text-muted-foreground">Phone</p>
                         <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                          +91 9873100982
+                          +91 87561 70309
                         </p>
                       </div>
                     </a>
@@ -150,9 +150,7 @@ const Contact = () => {
                       <div>
                         <p className="text-sm text-muted-foreground">Address</p>
                         <p className="font-medium text-foreground">
-                          B30/4 Wave Executive Floor, Wave City
-                          <br />
-                          Ghaziabad, UP, India, 201015
+                          Midtown, T5 504, Sector 59, Gurgaon, 122001
                         </p>
                       </div>
                     </div>

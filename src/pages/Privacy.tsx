@@ -76,8 +76,8 @@ const Privacy = () => {
                 Info@nflexsolutions.com
               </a>
               , Phone:{" "}
-              <a href="tel:+919873100982" className="text-primary hover:underline">
-                +91 9873100982
+              <a href="tel:+918756170309" className="text-primary hover:underline">
+                +91 87561 70309
               </a>
               .
             </p>

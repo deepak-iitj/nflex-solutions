@@ -115,7 +115,7 @@ const ProductDetail = () => {
   }
 
   const similar = getSimilarProducts(products, product);
-  const whatsappUrl = `https://wa.me/919873100982?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/918756170309?text=${encodeURIComponent(
     `Hi, I'm interested in ${product.title} (${product.brand}). Can you share more details?`,
   )}`;
 

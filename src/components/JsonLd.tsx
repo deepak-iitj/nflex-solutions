@@ -10,7 +10,7 @@ export function OrganizationJsonLd() {
     name: "NFlex Solutions",
     url: SITE_URL,
     logo: `${SITE_URL}/elco.jpeg`,
-    description: "Industrial Automation & Electrical Solutions – Ghaziabad, India",
+    description: "Industrial Automation & Electrical Solutions – Gurgaon, India",
     address: {
       "@type": "PostalAddress",
       streetAddress: "B30/4 Wave Executive Floor, Wave City",
@@ -21,7 +21,7 @@ export function OrganizationJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       email: "info@nflexsolutions.com",
-      telephone: "+91-9873100982",
+      telephone: "+91-8756170309",
       contactType: "customer service",
       areaServed: "IN",
     },
@@ -39,7 +39,7 @@ export function WebSiteJsonLd() {
     "@type": "WebSite",
     name: "NFlex Solutions",
     url: SITE_URL,
-    description: "Industrial Automation & Electrical Solutions – Ghaziabad, India",
+    description: "Industrial Automation & Electrical Solutions – Gurgaon, India",
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/products?search={search_term_string}` },

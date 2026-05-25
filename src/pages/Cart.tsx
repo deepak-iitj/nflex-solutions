@@ -164,7 +164,7 @@ const Cart = () => {
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-1.5 block">Phone</label>
-                    <Input placeholder="9873100982" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+                    <Input placeholder="8756170309" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-1.5 block">Address / Company</label>
