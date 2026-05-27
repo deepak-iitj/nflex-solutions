@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Product, defaultProducts } from "@/data/products";
 
-const STORAGE_KEY = "iva_products_v6";
+const STORAGE_KEY = "iva_products_v7";
 
 function loadProducts(): Product[] {
   try {

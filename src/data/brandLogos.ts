@@ -9,6 +9,9 @@ import rockwell from "@/assets/rockwell.png";
 import mitsubishi from "@/assets/mitsubishi.png";
 import honeywell from "@/assets/honeywell.png";
 import kuebler from "@/assets/kuebler.svg";
+import elco from "@/assets/elco.jpeg";
+import sick from "@/assets/sick.svg";
+import euchner from "@/assets/euchner.svg";
 
 export const brandLogoUrls: Record<string, string> = {
   Siemens: siemens,
@@ -18,6 +21,9 @@ export const brandLogoUrls: Record<string, string> = {
   Mitsubishi: mitsubishi,
   Honeywell: honeywell,
   KUEBLER: kuebler,
+  ELCO: elco,
+  SICK: sick,
+  EUCHNER: euchner,
 };
 
 export function getBrandLogo(brand: string): string | undefined {

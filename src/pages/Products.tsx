@@ -25,7 +25,7 @@ function ProductImage({ src, alt, brandFallback }: { src: string | undefined; al
     <img
       src={src}
       alt={alt}
-      className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110`}
+      className={`absolute inset-0 w-full h-full object-contain bg-white p-4 mix-blend-multiply transition-transform duration-700 group-hover:scale-110`}
       onError={() => setError(true)}
     />
   );
@@ -133,11 +133,12 @@ function ProductListCard({ product }: { product: Product }) {
 }
 
 const Products = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const qParam = searchParams.get("q") ?? "";
   const catParam = searchParams.get("category") ?? "All";
+  const brandParam = searchParams.get("brand") ?? "All";
   const { products } = useProducts();
-  const [activeBrand, setActiveBrand] = useState<string>("All");
+  const [activeBrand, setActiveBrand] = useState<string>(brandParam);
   const [activeCategory, setActiveCategory] = useState<string>(catParam);
   const [search, setSearch] = useState(qParam);
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
@@ -145,6 +146,17 @@ const Products = () => {
 
   useEffect(() => setSearch(qParam), [qParam]);
   useEffect(() => setActiveCategory(catParam), [catParam]);
+  useEffect(() => setActiveBrand(brandParam), [brandParam]);
+
+  const updateQueryParams = (key: string, value: string) => {
+    const newParams = new URLSearchParams(searchParams);
+    if (value === "All" || value === "") {
+      newParams.delete(key);
+    } else {
+      newParams.set(key, value);
+    }
+    setSearchParams(newParams);
+  };
 
   const filtered = useMemo(
     () =>
@@ -227,7 +239,7 @@ const Products = () => {
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3 block">Categories</label>
                 <div className="space-y-1.5">
                   <button
-                    onClick={() => setActiveCategory("All")}
+                    onClick={() => updateQueryParams("category", "All")}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       activeCategory === "All" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground"
                     }`}
@@ -237,7 +249,7 @@ const Products = () => {
                   {categoryList.map((cat) => (
                     <button
                       key={cat}
-                      onClick={() => setActiveCategory(cat)}
+                      onClick={() => updateQueryParams("category", cat)}
                       className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeCategory === cat ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       }`}
@@ -253,7 +265,7 @@ const Products = () => {
                 <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3 block">Brands</label>
                 <div className="space-y-1.5">
                   <button
-                    onClick={() => setActiveBrand("All")}
+                    onClick={() => updateQueryParams("brand", "All")}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       activeBrand === "All" ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
                     }`}
@@ -263,7 +275,7 @@ const Products = () => {
                   {brandList.map((brand) => (
                     <button
                       key={brand}
-                      onClick={() => setActiveBrand(brand)}
+                      onClick={() => updateQueryParams("brand", brand)}
                       className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeBrand === brand ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       }`}
